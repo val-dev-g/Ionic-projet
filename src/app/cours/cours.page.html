@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-title>{{title}}</ion-title>
+  <ion-toolbar>
+    <a routerLink="/home">Retour home</a>
+    <ion-searchbar [(ngModel)]="searchnom">
+    </ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="search()" color="secondary">
+        Rechercher
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list inset="true">
+    <ion-item *ngFor="let cours of listeCours">
+      <ion-card>
+
+        <ion-card-header>
+          <ion-card-title>
+            {{cours.nom}}
+          </ion-card-title>
+          <ion-card-subtitle>
+            {{cours.professeur}}
+          </ion-card-subtitle>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Nb élèves : {{cours.nbEleves}}
+        </ion-card-content>
+        <ion-card-content>
+          <app-saisie [couramodifie]="cours" (onajout)="update($event)"></app-saisie>
+        </ion-card-content>
+        <ion-button (click)="delete(cours)" color="danger">Supprimer</ion-button>
+        <ion-button (click)="update(cours)">Modifier</ion-button>
+      </ion-card>
+
+    </ion-item>
+  </ion-list>
+
+  <app-saisie (onajout)="ajout($event)"></app-saisie>
+
+</ion-content>

@@ -8,8 +8,28 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'courses',
     pathMatch: 'full'
+  },
+  {
+    path: 'courses',
+    loadChildren: () => import('./courses/courses.module').then( m => m.CoursesPageModule)
+  },
+  {
+    path: 'mapage',
+    loadChildren: () => import('./mapage/mapage.module').then( m => m.MapagePageModule)
+  },
+  {
+    path: 'saisiecours',
+    loadChildren: () => import('./saisiecours/saisiecours.module').then( m => m.SaisiecoursPageModule)
+  },
+  {
+    path: 'cours',
+    loadChildren: () => import('./cours/cours.module').then( m => m.CoursPageModule)
+  },
+  {
+    path: 'saisiecours',
+    loadChildren: () => import('./pages/saisiecours/saisiecours.module').then( m => m.SaisiecoursPageModule)
   },
 ];
 

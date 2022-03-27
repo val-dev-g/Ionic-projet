@@ -1,0 +1,17 @@
+<ion-item>
+  <ion-label>Nom : </ion-label>
+  <ion-input [(ngModel)]="cours.nom" placeholder="nom à saisir"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Professeur : </ion-label>
+  <ion-input [(ngModel)]="cours.professeur" placeholder="prof à saisir"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Nb éleves : </ion-label>
+  <ion-input type="number" [(ngModel)]="cours.nbEleves" placeholder="Nb élèves à saisir"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-button (click)="ajout(cours)" color='success'>Ajouter</ion-button>
+</ion-item>
+

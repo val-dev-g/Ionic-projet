@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "cours": [
+    {
+      "id": 1,
+      "nom": "cours 012",
+      "nbEleves": 10,
+      "professeur": "CGE"
+    },
+    {
+      "id": 2,
+      "nom": "02",
+      "nbEleves": 22,
+      "professeur": "22"
+    },
+    {
+      "id": 4,
+      "nom": "nom",
+      "nbEleves": 5,
+      "professeur": "prof"
+    },
+    {
+      "id": 5,
+      "nom": "ff",
+      "nbEleves": 8,
+      "professeur": "ff"
+    },
+    {
+      "id": 6,
+      "nom": "ff",
+      "nbEleves": 8,
+      "professeur": "ff"
+    }
+  ]
+}

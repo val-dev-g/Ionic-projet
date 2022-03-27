@@ -1,20 +1,55 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <button *ngIf="promptEvent" (click)="onInstall()">Install</button>
     <ion-title>
-      Blank
+      header de la page
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='/courses'></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openMenu($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <strong>
+      Le contenu de la page
+    </strong>
   </div>
+  <button (click)="openAlert()">Ouvrir l'alerte</button>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Saisir un cours</ion-card-subtitle>
+      <ion-card-title>Formulaire</ion-card-title>
+    </ion-card-header>
+    <a routerLink="/saisiecours">Lien vers le formualire</a>
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Liste des cours</ion-card-subtitle>
+      <ion-card-title>Détail du cours</ion-card-title>
+    </ion-card-header>
+    <a routerLink="/cours">Accès à la liste des Cours</a>
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

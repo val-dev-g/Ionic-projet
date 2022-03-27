@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Saisiecours</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="saisieform" (ngSubmit)="onSubmit()" novalidate>
+    <ion-item>
+      <ion-label>Nom : </ion-label>
+      <ion-input placeholder="nom à saisir" formControlName="nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Professeur : </ion-label>
+      <ion-input placeholder="prof à saisir" formControlName="prof"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nb éleves : </ion-label>
+      <ion-input type="number" placeholder="Nb élèves à saisir" formControlName="nbel"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="3">
+          <ion-button class="ion-text-center" type="submit">Ajouter</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</ion-content>
